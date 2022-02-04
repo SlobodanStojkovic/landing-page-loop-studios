@@ -1,3 +1,131 @@
-html {
-  font-size: 16px;
+/* josefin-sans-300 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/josefin-sans-v23-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/josefin-sans-v23-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/josefin-sans-v23-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/josefin-sans-v23-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/josefin-sans-v23-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/josefin-sans-v23-latin-300.svg#JosefinSans") format("svg"); /* Legacy iOS */
+}
+
+/* alata-regular - latin */
+@font-face {
+  font-family: "Alata";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/alata-v7-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/alata-v7-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/alata-v7-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/alata-v7-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/alata-v7-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/alata-v7-latin-regular.svg#Alata")
+      format("svg"); /* Legacy iOS */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+$black: #000000;
+$white: #ffffff;
+$josefinSans: "Josefin Sans";
+$alata: "Alata";
+
+.header {
+  background-image: url(../img/mobile/image-hero.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 375px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+
+  &__header-menu {
+    &__item {
+      list-style-type: none;
+      & a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 40px 24px;
+    justify-content:space-between;
+    align-items: center;
+
+
+    & nav {
+      display: none;
+    }
+
+    &__menu-icon {
+      width: 24px;
+      height: 16px;
+      align-self: center;
+    }
+  }
+
+  &__title-wrapper {
+    width: 327px;
+    height: 196px;
+    border: 2px solid $white;
+    margin: 110px 24px;
+
+    &__title {
+      margin: 0;
+      color: $white;
+      text-transform: uppercase;
+      font-family: $josefinSans;
+      font-size: 40px;
+      line-height: 38px;
+      padding: 24px;
+    }
+  }
+}
+
+.interactive {
+  &__img {
+    width: 327px;
+    height: 224px;
+  }
+}
+
+.footer {
+  background-color: $black;
 }
