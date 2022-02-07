@@ -68,12 +68,16 @@ $alata: "Alata";
 
 .header {
   background-image: url(../img/mobile/image-hero.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 375px;
-  height: 650px;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1024px) {
+    background-image: url(../img/desktop/image-hero.jpg);
+  }
 }
 
 .navbar {
@@ -110,7 +114,8 @@ $alata: "Alata";
     width: 327px;
     height: 196px;
     border: 2px solid $white;
-    margin: 110px 24px;
+    margin: auto;
+    align-self: center;
 
     &__title {
       margin: 0;
@@ -128,13 +133,13 @@ $alata: "Alata";
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
 
   &__img-wrapper {
     padding: 96px 20px 48px;
 
     &__img {
-      width: 327px;
-      height: 224px;
+      width: 100%;
     }
   }
 
@@ -171,6 +176,8 @@ $alata: "Alata";
   &__wrapper {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    align-items: center;
   }
 
   &__subtitle {
@@ -202,9 +209,10 @@ $alata: "Alata";
   }
 
   &__gallery {
+    width: 90%;
+    max-width: 500px;
+
     &__item {
-      width: 327px;
-      height: 120px;
       margin: 24px;
       background-size: cover;
 
