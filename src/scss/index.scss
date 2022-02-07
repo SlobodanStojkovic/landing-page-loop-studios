@@ -55,6 +55,12 @@ body {
   line-height: 1;
 }
 
+nav a:hover {
+  cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
 $black: #000000;
 $white: #ffffff;
 $josefinSans: "Josefin Sans";
@@ -182,17 +188,17 @@ $alata: "Alata";
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   max-width: 1340px;
 
   @media (min-width: 1024px) {
     width: 100%;
-    padding: 160px 160px 160px 69px;
+    padding: 160px 112px;
     flex-direction: row;
   }
 
   &__img-wrapper {
     padding: 96px 20px 48px;
+    margin: auto;
 
     @media (min-width: 1024px) {
       flex: 3;
@@ -200,7 +206,7 @@ $alata: "Alata";
     }
 
     &__img {
-      height: 500px;
+      max-width: 90vw;
     }
   }
 
@@ -230,7 +236,7 @@ $alata: "Alata";
         font-size: 48px;
         line-height: 48px;
         padding: 0 0 25px 0;
-        min-width: 400px;
+        min-width: 520px;
       }
     }
 
@@ -272,6 +278,7 @@ $alata: "Alata";
       grid-template-columns: repeat(2, 1fr);
       padding: 24px 164px 164px;
       gap: 80px;
+      max-width: 1440px;
     }
   }
 
@@ -289,6 +296,11 @@ $alata: "Alata";
     @media (min-width: 1024px) {
       padding: 0;
       text-align: start;
+      font-family: $josefinSans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 48px;
     }
   }
 
@@ -312,6 +324,12 @@ $alata: "Alata";
     letter-spacing: 5px;
     text-transform: uppercase;
     border: 1px solid $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+    }
   }
 
   &__gallery {
@@ -336,6 +354,11 @@ $alata: "Alata";
         height: 450px;
         background-size: contain;
         background-repeat: no-repeat;
+
+        &:hover {
+          opacity: 0.75;
+          cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+        }
       }
 
       p {
@@ -378,11 +401,7 @@ $alata: "Alata";
           width: 31%;
 
           @media (min-width: 1024px) {
-            width: 45%;
-          }
-
-          @media (min-width: 1920px) {
-            width: 35%;
+            width: 55%;
           }
         }
 
@@ -439,11 +458,9 @@ $alata: "Alata";
       padding: 52px 20px 20px;
 
       @media (min-width: 1024px) {
-        width: 70%;
-      }
-
-      @media (min-width: 1920px) {
-        width: 45%;
+        width: 82%;
+        font-size: 32px;
+        line-height: 32px;
       }
     }
   }
@@ -454,6 +471,9 @@ $alata: "Alata";
   width: 100%;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: 1024px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -519,6 +539,11 @@ $alata: "Alata";
 
     &__link {
       padding: 16px;
+
+      &:hover {
+        cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+        border-bottom: 2px solid $white;
+      }
 
       @media (min-width: 1024px) {
         padding: 0;
