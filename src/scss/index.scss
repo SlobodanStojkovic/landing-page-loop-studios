@@ -264,6 +264,13 @@ $alata: "Alata";
     flex-direction: column;
     width: 100vw;
     align-items: center;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 24px 164px 164px;
+      gap: 80px;
+    }
   }
 
   &__subtitle {
@@ -276,12 +283,23 @@ $alata: "Alata";
     line-height: 32px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (min-width: 1024px) {
+      padding: 0;
+      text-align: start;
+    }
   }
 
   &__btn-wrapper {
     order: 2;
     align-self: center;
     padding: 12px 34px 96px;
+
+    @media (min-width: 1024px) {
+      order: unset;
+      padding: 0;
+      justify-self: end;
+    }
   }
 
   &__button {
@@ -298,9 +316,33 @@ $alata: "Alata";
     width: 90%;
     max-width: 500px;
 
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column: 1/-1;
+      gap: 30px;
+      width: 100%;
+      max-width: unset;
+    }
+
     &__item {
       margin: 24px;
       background-size: cover;
+
+      @media (min-width: 1024px) {
+        margin: 0;
+        height: 450px;
+        background-size: cover;
+      }
+
+      p {
+        margin: 0;
+
+        @media (min-width: 1024px) {
+          position: relative;
+          top: 320px;
+        }
+      }
 
       &:nth-child(1) {
         background-image: url(../img/mobile/image-deep-earth.jpg);
@@ -328,6 +370,14 @@ $alata: "Alata";
 
       &:nth-child(4) {
         background-image: url(../img/mobile/image-grid.jpg);
+
+        & p {
+          width: 31%;
+
+          @media (min-width: 1024px) {
+            width: 45%;
+          }
+        }
 
         @media (min-width: 1024px) {
           background-image: url(../img/desktop/image-grid.jpg);
@@ -368,7 +418,7 @@ $alata: "Alata";
     }
 
     &__title {
-      width: 51%;
+      width: 45%;
       word-wrap: break-word;
       font-family: $josefinSans;
       font-style: normal;
@@ -381,8 +431,8 @@ $alata: "Alata";
       word-wrap: break-word;
       padding: 52px 20px 20px;
 
-      & :nth-child(4) {
-        width: 45%;
+      @media (min-width: 1024px) {
+        width: 70%;
       }
     }
   }
