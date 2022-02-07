@@ -60,6 +60,12 @@ $white: #ffffff;
 $josefinSans: "Josefin Sans";
 $alata: "Alata";
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
   background-image: url(../img/mobile/image-hero.jpg);
   background-size: contain;
@@ -86,9 +92,8 @@ $alata: "Alata";
   &__wrapper {
     display: flex;
     padding: 40px 24px;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-
 
     & nav {
       display: none;
@@ -120,9 +125,44 @@ $alata: "Alata";
 }
 
 .interactive {
-  &__img {
-    width: 327px;
-    height: 224px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img-div {
+    padding: 96px 20px 48px;
+
+    &__img {
+      width: 327px;
+      height: 224px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    &__subtitle {
+      font-family: $josefinSans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    &__paragraph {
+      font-family: $alata;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      padding: 16px 48px 96px 48px;
+    }
   }
 }
 
