@@ -77,6 +77,7 @@ $alata: "Alata";
 
   @media (min-width: 1024px) {
     background-image: url(../img/desktop/image-hero.jpg);
+    height: 650px;
   }
 }
 
@@ -101,12 +102,46 @@ $alata: "Alata";
 
     & nav {
       display: none;
+
+      @media (min-width: 1024px) {
+        display: inline-block;
+      }
     }
 
     &__menu-icon {
       width: 24px;
       height: 16px;
       align-self: center;
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &__header-menu {
+      @media (min-width: 1024px) {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+
+        &__item {
+          color: $white;
+        }
+
+        &__link {
+          color: $white;
+          text-decoration: none;
+          font-family: $alata;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      padding: 64px 165px;
     }
   }
 
@@ -125,6 +160,20 @@ $alata: "Alata";
       font-size: 40px;
       line-height: 38px;
       padding: 24px;
+
+      @media (min-width: 1024px) {
+        font-size: 72px;
+        line-height: 70px;
+        padding: 40px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      width: 650px;
+      height: 278px;
+      align-self: flex-start;
+      margin: 75px 165px;
     }
   }
 }
