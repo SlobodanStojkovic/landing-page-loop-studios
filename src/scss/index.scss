@@ -88,43 +88,55 @@ $alata: "Alata";
 .navbar {
   width: 100%;
 
-  &__header-menu {
-    &__item {
-      list-style-type: none;
-      & a {
-        text-decoration: none;
-        color: $white;
-      }
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__hamburger {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      padding-right: 165px;
     }
   }
 
   &__wrapper {
     display: flex;
+    flex-direction: row;
     padding: 40px 24px;
     justify-content: space-between;
     align-items: center;
 
-    & nav {
-      display: none;
-
-      @media (min-width: 1024px) {
-        display: inline-block;
-      }
-    }
-
-    &__menu-icon {
-      width: 24px;
-      height: 16px;
-      align-self: center;
-
-      @media (min-width: 1024px) {
-        display: none;
-      }
-    }
-
     &__header-menu {
+      display: flex;
+      flex-direction: column;
+      padding: 45% 24px;
+
+      &__item {
+        list-style-type: none;
+        margin-bottom: 24px;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: $white;
+        font-family: $josefinSans;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+
       @media (min-width: 1024px) {
         display: flex;
+        flex-direction: row;
+        padding: 24px;
+        align-self: flex-end;
         gap: 20px;
         list-style-type: none;
 
@@ -136,11 +148,29 @@ $alata: "Alata";
           color: $white;
           text-decoration: none;
           font-family: $alata;
-          font-style: normal;
-          font-weight: normal;
+
+          font-family: $josefinSans;
           font-size: 15px;
           line-height: 25px;
+          text-transform: none;
         }
+      }
+    }
+
+    & nav {
+      @media (min-width: 1024px) {
+        display: inline-block;
+      }
+    }
+
+    &__menu-icon {
+      width: 24px;
+      height: 24px;
+      align-self: center;
+      background: transparent;
+
+      @media (min-width: 1024px) {
+        display: none;
       }
     }
 
@@ -344,7 +374,7 @@ $alata: "Alata";
     }
 
     &__item {
-      margin: 24px;
+      margin: 24px 0;
       background-size: cover;
 
       @media (min-width: 1024px) {
@@ -442,7 +472,7 @@ $alata: "Alata";
     }
 
     &__title {
-      width: 45%;
+      width: 50%;
       word-wrap: break-word;
       font-family: $josefinSans;
       font-style: normal;
@@ -589,9 +619,39 @@ $alata: "Alata";
     transition: width 0.35s ease;
   }
 
-  &:hover {
-    &::after {
-      width: 20px;
+  @media (min-width: 1024px) {
+    &:hover {
+      &::after {
+        width: 20px;
+      }
     }
+  }
+}
+
+.js-navbar__nav {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.js-fixed {
+  &-logo,
+  &-menu {
+    position: fixed;
+    z-index: 10;
+  }
+
+  &-logo {
+    top: 4.6%;
+  }
+
+  &-menu {
+    top: 5%;
+    right: 4.5%;
   }
 }
